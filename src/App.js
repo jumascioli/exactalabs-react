@@ -1,37 +1,27 @@
-function List() {
-  return (
-    <ul>
-      <li>Task 1</li>
-      <li>Task 2</li>
-      <li>Task 3</li>
-    </ul>
-  );
-}
+import { useState } from "react";
 
-function Pagination({ page }) {
-  return (
-    <div>
-      <button>{"<"}</button>
-
-      <span>Página {page}</span>
-
-      <button>{">"}</button>
-    </div>
-  );
-}
-
-function Input() {
-  return <input />;
-}
+import Input from "./components/Input";
+import List from "./components/List";
+import Pagination from "./components/Pagination";
 
 function App() {
+const [value, setValue] = useState("Mallone");
+
   return (
     <div className="App">
       <h1>Task list</h1>
 
-      <Input />
+      <input
+        placeholder="Digite sua task"
+        value={value}
+        onChange={(event) => {
+          setValue (event.target.value);        
+        }}
+      />
 
       <button>Adicionar task</button>
+
+      <div>{value}</div>
 
       <List />
 
