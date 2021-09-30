@@ -1,9 +1,9 @@
-export default function List() {
+export default function List({ tasks }) {
   return (
     <ul>
-      <li>Task 1</li>
-      <li>Task 2</li>
-      <li>Task 3</li>
+      {tasks.map((task) => (
+        <li key={task.id}>{task.title}</li>
+      ))}
     </ul>
   );
 }
