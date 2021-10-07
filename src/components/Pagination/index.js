@@ -1,11 +1,13 @@
-export default function Pagination({ page }) {
+import * as S from "./styles";
+
+export default function Pagination({ page, onPrev, onNext }) {
   return (
-    <div>
-      <button>{"<"}</button>
+    <S.Wrapper>
+      <S.Button onClick={onPrev}>{"<"}</S.Button>
 
       <span>Página {page}</span>
 
-      <button>{">"}</button>
-    </div>
+      <S.Button onClick={onNext}>{">"}</S.Button>
+    </S.Wrapper>
   );
 }

@@ -1,9 +1,18 @@
-export default function List({ tasks }) {
+import * as S from "./styles";
+import { DeleteBin } from "@styled-icons/remix-fill";
+
+export default function List({ tasks, onDelete }) {
   return (
-    <ul>
+    <S.Wrapper>
       {tasks.map((task) => (
-        <li key={task.id}>{task.title}</li>
+        <S.Item key={task.id}>
+          {task.title}
+        
+          <S.Button onClick={() => onDelete(task.id)}>
+            {/* <DeleteBin /> */}
+          </S.Button>
+        </S.Item>
       ))}
-    </ul>
+    </S.Wrapper>
   );
 }
