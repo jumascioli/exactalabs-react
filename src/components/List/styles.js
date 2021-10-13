@@ -32,7 +32,7 @@ export const Button = styled.button`
     opacity: 0.8;
   }
 
-  ::active {
+  :active {
     opacity: 0.6;
   }
 `;

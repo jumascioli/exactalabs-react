@@ -34,18 +34,6 @@ function Home() {
     setValue(event.target.value)
   }
 
-  async function handleClick(event) {
-    if (value) {
-      await TaskService.saveTask({
-        title: value,
-      });
-
-      setValue("");
-
-      getTasks();
-    }
-  }
-
   async function handleSubmit(event) {
     if (value) {
       await TaskService.saveTask({
@@ -70,6 +58,7 @@ function Home() {
 
       <S.Form onSubmit={handleSubmit}>  
         <Input
+          required
           placeholder="DIGITE SUA TASK"
           value={value}
           onChange={handleChange}      

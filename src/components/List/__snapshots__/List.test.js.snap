@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> should render correctly 1`] = `
+<ul
+  class="sc-bdfBQB ivTgth"
+>
+  <li
+    class="sc-gsTEea eaPawV"
+  >
+    Teste tasks
+    <button
+      class="sc-dlfnuX hhtfFF"
+    />
+  </li>
+</ul>
+`;
